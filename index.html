@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Factura</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <div class="invoice-box">
+    <div class="invoice-box" role="article" aria-label="Factura">
         <div class="header">
             <div class="header-top">
                 <span class="brand">
-                    <img src="b93945bc-3aa1-41a0-91cf-9b5f9983425c.png" alt="Logo">
+                    <img src="./b93945bc-3aa1-41a0-91cf-9b5f9983425c.png" alt="Logo">
                     Nombre de marca
                 </span>
                 <span class="invoice-title">FACTURA</span>
             </div>
-            <div class="red-line"></div>
+            <div class="red-line" aria-hidden="true"></div>
             <div class="header-bottom">
                 <div class="info">
                     <strong>Factura a:</strong> Dwayne Clark<br>
@@ -29,61 +31,67 @@
                 </div>
             </div>
         </div>
+
         <div class="table-section">
-            <table>
-                <tr>
-                    <th>SL.</th>
-                    <th>Descripción del artículo</th>
-                    <th>Precio</th>
-                    <th>Cantidad.</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lorem Ipsum Dolor</td>
-                    <td>$50.00</td>
-                    <td>1</td>
-                    <td>$50.00</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Pellentesque id neque ligula</td>
-                    <td>$20.00</td>
-                    <td>3</td>
-                    <td>$60.00</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Interdum et malesuada fames</td>
-                    <td>$10.00</td>
-                    <td>2</td>
-                    <td>$20.00</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Vivamus volutpat faucibus</td>
-                    <td>$90.00</td>
-                    <td>1</td>
-                    <td>$90.00</td>
-                </tr>
-                <tr>    
-                
-                    <td>.</td>
-                    <td></td>
-                    <td></td>       
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>    
-                
-                    <td></td>
-                    <td></td>
-                    <td></td>       
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+            <div class="table-responsive" aria-hidden="false">
+                <table role="table" aria-label="Detalle de items">
+                    <thead>
+                        <tr>
+                            <th scope="col">SL.</th>
+                            <th scope="col">Descripción del artículo</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="SL.">1</td>
+                            <td data-label="Descripción del artículo">Lorem Ipsum Dolor</td>
+                            <td data-label="Precio">$50.00</td>
+                            <td data-label="Cantidad">1</td>
+                            <td data-label="Total">$50.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="SL.">2</td>
+                            <td data-label="Descripción del artículo">Pellentesque id neque ligula</td>
+                            <td data-label="Precio">$20.00</td>
+                            <td data-label="Cantidad">3</td>
+                            <td data-label="Total">$60.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="SL.">3</td>
+                            <td data-label="Descripción del artículo">Interdum et malesuada fames</td>
+                            <td data-label="Precio">$10.00</td>
+                            <td data-label="Cantidad">2</td>
+                            <td data-label="Total">$20.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="SL.">4</td>
+                            <td data-label="Descripción del artículo">Vivamus volutpat faucibus</td>
+                            <td data-label="Precio">$90.00</td>
+                            <td data-label="Cantidad">1</td>
+                            <td data-label="Total">$90.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="SL.">.</td>
+                            <td data-label="Descripción del artículo"></td>
+                            <td data-label="Precio"></td>
+                            <td data-label="Cantidad"></td>
+                            <td data-label="Total"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="SL."></td>
+                            <td data-label="Descripción del artículo"></td>
+                            <td data-label="Precio"></td>
+                            <td data-label="Cantidad"></td>
+                            <td data-label="Total"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <div class="totals-section">
             <div class="totals-left">
                 <div class="thanks">Thank you for your business</div>
@@ -94,8 +102,8 @@
                     Bank Details: Add your details
                 </div>
             </div>
-            
-            <table class="totals-table">
+
+            <table class="totals-table" aria-hidden="false">
                 <tr>
                     <td>Sub Total:</td>
                     <td>$220.00</td>
@@ -110,50 +118,77 @@
                 </tr>
             </table>
         </div>
+
         <br>
-        
-      <div class="sign-section left" style="min-width:180px;">
-    <span class="line"></span>
-</div>
-<div class="terms-sign-section">
-    <div class="terms-section">
-        <strong>Terms & Conditions</strong><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, velit vel sollicitudin eleifend, erat urna cursus enim, at dictum sem enim eu sapien.
-    </div>
-    <div class="sign-section">
-        <span class="line"></span>
-        Authorised Sign
-    </div>
-</div>
-        <div class="footer-black-line"></div>
+
+        <div class="sign-section left" style="min-width:180px;" aria-hidden="false">
+            <span class="line" aria-hidden="true"></span>
+        </div>
+
+        <div class="terms-sign-section">
+            <div class="terms-section">
+                <strong>Terms & Conditions</strong><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, velit vel sollicitudin eleifend,
+                erat urna cursus enim, at dictum sem enim eu sapien.
+            </div>
+            <div class="sign-section">
+                <span class="line"></span>
+                Authorised Sign
+            </div>
+        </div>
+
+        <div class="footer-black-line" aria-hidden="true"></div>
     </div>
 </body>
+
 </html>
 <style>
+        /* Base styles (mostly preserved from the original) */
+        :root {
+            --bg: #f3f3f3;
+            --card-bg: #fff;
+            --dark: #22262a;
+            --accent: #EF3E5D;
+            --muted: #555;
+        }
+
+        html,
         body {
-            background: #f3f3f3;
+            height: 100%;
+        }
+
+        body {
+            background: var(--bg);
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 40px 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
         .invoice-box {
-            max-width: 540px;
+            max-width: 820px;
+            /* increased for better desktop presentation */
             margin: 0 auto;
-            background: #fff;
+            background: var(--card-bg);
             border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
             overflow: hidden;
         }
+
         .header {
-            background: #22262a;
+            background: var(--dark);
             color: #fff;
             padding: 24px 32px 0 32px;
         }
+
         .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
         }
+
         .brand {
             font-size: 1.2em;
             font-weight: bold;
@@ -162,58 +197,87 @@
             align-items: center;
             gap: 10px;
         }
+
         .brand img {
             height: 32px;
+            width: auto;
             margin-right: 8px;
             vertical-align: middle;
+            display: block;
+            max-width: 100%;
         }
+
         .invoice-title {
-            color: #EF3E5D;
+            color: var(--accent);
             font-size: 1.5em;
             font-weight: bold;
             letter-spacing: 2px;
         }
+
         .red-line {
             width: 100%;
             height: 0;
-            border-bottom: 3px solid #EF3E5D;
+            border-bottom: 3px solid var(--accent);
             margin: 14px 0 0 0;
         }
+
         .header-bottom {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             padding: 18px 0 18px 0;
         }
+
         .info {
             font-size: 0.95em;
             line-height: 1.5;
         }
+
         .details {
             text-align: right;
             font-size: 0.95em;
             line-height: 1.5;
         }
+
+        /* Table / items */
         .table-section {
-            padding: 0;
+            padding: 0 24px 0 24px;
         }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            /* graceful horizontal scroll on small screens */
+            -webkit-overflow-scrolling: touch;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 0;
             font-size: 0.97em;
+            min-width: 640px;
+            /* helps layout on larger screens */
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px 8px;
             text-align: left;
+            vertical-align: middle;
         }
+
         th {
             background: #f7f7f7;
             font-weight: bold;
+            white-space: nowrap;
         }
+
         tr:not(:last-child) td {
             border-bottom: 1px solid #eee;
         }
+
+        /* Totals and footer */
         .totals-section {
             display: flex;
             justify-content: space-between;
@@ -222,31 +286,40 @@
             font-size: 1em;
             gap: 16px;
         }
+
         .totals-left {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             font-size: 0.95em;
-            color: #22262a;
+            color: var(--dark);
         }
+
         .totals-left .thanks {
             font-weight: bold;
             margin-bottom: 8px;
         }
+
         .totals-left .payment-info {
             margin-bottom: 0;
         }
+
         .totals-table {
-            width: 180px;
+            width: 220px;
+            border-collapse: collapse;
         }
-        .totals-table td, .totals-table th {
-            padding: 4px 8px;
+
+        .totals-table td,
+        .totals-table th {
+            padding: 6px 8px;
             text-align: right;
         }
+
         .totals-table th {
             background: #f7f7f7;
-            font-size: 1.1em;
+            font-size: 1.05em;
         }
+
         .terms-sign-section {
             display: flex;
             justify-content: space-between;
@@ -255,35 +328,191 @@
             font-size: 0.9em;
             margin-top: 18px;
         }
+
         .terms-section {
-            color: #555;
+            color: var(--muted);
             max-width: 60%;
         }
+
         .terms-section strong {
             font-size: 1em;
         }
+
         .sign-section {
             text-align: right;
             min-width: 180px;
         }
+
         .sign-section .line {
             display: block;
             margin-bottom: 8px;
-            border-bottom: 1px solid #22262a;
+            border-bottom: 1px solid var(--dark);
             width: 180px;
             margin-left: auto;
         }
+
         .footer-black-line {
             width: 100%;
             height: 0;
-            border-bottom: 20px solid #22262a;
+            border-bottom: 20px solid var(--dark);
             margin-top: 18px;
         }
+
         .sign-section.left {
-    text-align: left;
-}
-.sign-section.left .line {
-    margin-left: 0;
-    margin-right: auto;
-}
+            text-align: left;
+        }
+
+        .sign-section.left .line {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        /* Minor responsive tweaks for medium screens */
+        @media (max-width: 900px) {
+            .invoice-box {
+                max-width: 720px;
+            }
+
+            table {
+                min-width: 560px;
+            }
+        }
+
+        /* Small screen responsive behavior */
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 0;
+            }
+
+            .invoice-box {
+                margin: 0 12px;
+                border-radius: 6px;
+            }
+
+            .header {
+                padding: 16px 18px 0 18px;
+            }
+
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .brand {
+                font-size: 1em;
+                gap: 8px;
+            }
+
+            .invoice-title {
+                font-size: 1.2em;
+            }
+
+            .header-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding-bottom: 12px;
+            }
+
+            .table-section {
+                padding: 0 14px;
+            }
+
+            .totals-section {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0 18px 0 18px;
+                align-items: flex-start;
+            }
+
+            .totals-table {
+                width: 100%;
+            }
+
+            .terms-sign-section {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 18px 0 18px;
+                gap: 12px;
+            }
+
+            .terms-section {
+                max-width: 100%;
+            }
+
+            /* Make the item table transform into stacked blocks (mobile friendly) */
+            .table-responsive {
+                overflow: visible;
+            }
+
+            /* we'll change table display */
+            table {
+                border: 0;
+                min-width: 0;
+                font-size: 0.95em;
+            }
+
+            thead {
+                display: none;
+            }
+
+            /* hide headers on mobile */
+            tr {
+                display: block;
+                margin: 0 0 12px 0;
+                border: 1px solid #eee;
+                border-radius: 6px;
+                padding: 8px;
+                background: #fff;
+            }
+
+            td {
+                display: block;
+                text-align: left;
+                padding: 6px 10px;
+                border: 0;
+                white-space: normal;
+                position: relative;
+            }
+
+            /* use the data-label attribute to show header labels on each cell */
+            td:before {
+                content: attr(data-label);
+                display: block;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 4px;
+                font-size: 0.9em;
+            }
+
+            .sign-section .line {
+                width: 140px;
+            }
+
+            .sign-section {
+                min-width: auto;
+                width: 100%;
+                text-align: left;
+            }
+
+            .sign-section .line {
+                margin-left: 0;
+            }
+
+            .footer-black-line {
+                border-bottom-width: 14px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 380px) {
+            .brand img {
+                height: 28px;
+            }
+
+            .sign-section .line {
+                width: 120px;
+            }
+        }
     </style>
